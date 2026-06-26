@@ -1,0 +1,20 @@
+{
+  "name": "mr-review-agent-parent",
+  "version": "1.0.0",
+  "description": "Root runner for MERN MR Review Agent",
+  "main": "index.js",
+  "scripts": {
+    "install:all": "npm install && npm run install:frontend && npm run install:backend",
+    "install:frontend": "cd frontend && npm install --legacy-peer-deps",
+    "install:backend": "cd backend && npm install",
+    "dev": "concurrently \"npm run dev:backend\" \"npm run dev:frontend\"",
+    "dev:backend": "cd backend && npm run dev",
+    "dev:frontend": "cd frontend && npm run dev"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  }
+}
